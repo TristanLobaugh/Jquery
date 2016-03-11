@@ -88,7 +88,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<button class="btn btn-primary" todo="val">Val</button>
+				<button class="btn btn-primary" todo="val">Value</button>
 			</div>
 		</div>	
 		<div class="row">
@@ -104,11 +104,8 @@
 	</div>
 
 <script type="text/javascript">
-
 	$(document).ready(function()	{
-
 		var thing = $(".thing"); 
-
 		$("button").click(function(){
 			var theTrick = $(this).attr("todo");
 			if(theTrick === "hide")	{
@@ -151,10 +148,11 @@
 			}
 			else if(theTrick === "animate") {
 				thing.animate({
-					opacity: 0.25,
-				    left: "+=50",
-				    height: "toggle"
-				  }, 5000, function() {
+					width: "40%",
+					opacity: .3,
+				    fontSize: "30px",
+				    borderWidth: "10px"
+				  }, 2000, function() {thing.removeAttr("style")
 				  });
 			}
 			else if(theTrick === "delay") {
@@ -182,24 +180,7 @@
 				thing.text(value);
 			};
 		});
-
-		// $("#hide").click(function()	{
-		// 	$(".thing").hide();
-		// });
-
-		// $("#show").click(function()	{
-		// 	$(".thing").show();
-		// });
 	});
-
-	// document.getElementById("wrapper");
-	// $("#wrapper");
-	// document.getElementsByClassName("row");
-	// $(".row");
-	// document.getElementsByTagName("button");
-	// $("button");
-
-
 </script>
 
 </body>
